@@ -1,0 +1,46 @@
+{
+  "design": "kagnconv_lsq_w4a4",
+  "generated": "2026-07-10T02:39:45.797889+00:00",
+  "golden_n": 1000,
+  "stratification": "first 100 test images per class",
+  "sha256": {
+    "params.h": "94825ab4ad5334db4e8ab6702e13345317a59bbbec60157ce2392745dc2c90ac",
+    "golden.h": "57fb7b56bf5969a30afffb5dbb80a5e184fddb3a88483fcdd67f58eb28b5722b",
+    "golden_inputs.npy": "14df9be19413143d069509719f859196ab1af4e677bc6a7a0d901afff8056c10",
+    "golden_outputs.npy": "cc774a49221cd7505d18221af90da1716086a4ccfa3cee516ac64d1f02fb5e67",
+    "golden_labels.npy": "ffc59e55de2a3441722663e785cb55c2a9ce1606ce9a9d46d7890dfc2ccef6c2",
+    "golden_indices.npy": "f58b3c93b1c3179f706436d0ef76f0d2fd81ebfe6414998ea1298a309f7a246f"
+  },
+  "l1": {
+    "milestone": "M3",
+    "rung": "L1",
+    "design": "kagnconv_lsq_w4a4",
+    "n_images": 10000,
+    "argmax_agree": 10000,
+    "argmax_mismatch_indices": [],
+    "torch_fake_quant_acc": 92.74,
+    "emulator_acc": 92.74,
+    "passed": true
+  },
+  "l4": {
+    "milestone": "M3",
+    "rung": "L4",
+    "design": "kagnconv_lsq_w4a4",
+    "emulator_acc": 92.74,
+    "dense_fp32_acc": 95.43,
+    "delta_pp": 2.690000000000012,
+    "passed": false
+  },
+  "family": "kagnconv",
+  "input_step": 0.3555161952972412,
+  "act_steps": [
+    0.3555161952972412,
+    0.23629507422447205,
+    0.16549448668956757,
+    0.028180355206131935
+  ],
+  "pool": {
+    "mult": 2059021302,
+    "shift": 34
+  }
+}

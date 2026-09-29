@@ -1,0 +1,37 @@
+{
+  "design": "d1",
+  "generated": "2026-07-04T00:43:45.139910+00:00",
+  "golden_n": 1000,
+  "stratification": "first 100 test images per class",
+  "sha256": {
+    "params.h": "abda71fc32400fb8750176d755e50999d00f2c06d598656e7cf6c861d1cd0ea3",
+    "golden.h": "30c606843b4b5198c55bccab0f009b0c6bdaa449f445f44b6652fade7d2a543a",
+    "golden_inputs.npy": "0084caf9efafb0d3aa8502d9eb90d2bbf054935545fc4014a7453bd0821bb777",
+    "golden_outputs.npy": "4fdbf6fdf4c528a136b58c69f4b13be77f39ba4f83ce3cf153fd26bb1ca7dd75",
+    "golden_labels.npy": "ffc59e55de2a3441722663e785cb55c2a9ce1606ce9a9d46d7890dfc2ccef6c2",
+    "golden_indices.npy": "f58b3c93b1c3179f706436d0ef76f0d2fd81ebfe6414998ea1298a309f7a246f"
+  },
+  "l1": {
+    "milestone": "M3",
+    "rung": "L1",
+    "design": "d1_fp32",
+    "n_images": 10000,
+    "max_abs_logit_diff": 8.58306884765625e-06,
+    "argmax_agree": 10000,
+    "numpy_acc": 96.28,
+    "passed": true
+  },
+  "logit_tolerance_tb": 0.001,
+  "weight_shapes": [
+    [
+      64,
+      784,
+      9
+    ],
+    [
+      10,
+      64,
+      9
+    ]
+  ]
+}

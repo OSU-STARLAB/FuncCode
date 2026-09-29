@@ -1,0 +1,75 @@
+{
+  "dataset": "cifar100",
+  "preset": "kagn_simple_cifar100_8_layer_v2",
+  "data_root": "./data",
+  "out_dir": "runs_conv_cifar",
+  "run_name": "fc_branch_K16_cifar100_s42",
+  "seed": 42,
+  "device": "cuda",
+  "epochs": 200,
+  "lr": 0.001,
+  "optimizer": "adamw",
+  "weight_decay": 5e-05,
+  "warmup_epochs": 5,
+  "label_smoothing": 0.1,
+  "mixup": 0.2,
+  "batch_size": 128,
+  "test_batch_size": 512,
+  "num_workers": 3,
+  "val_size": 5000,
+  "subset_train": 0,
+  "cutout": 8,
+  "no_augment": false,
+  "ema_decay": 0.999,
+  "no_amp": false,
+  "methods": [
+    "branch"
+  ],
+  "clusters_list": [
+    16
+  ],
+  "base_clusters_list": [],
+  "codebook_bits": [
+    8,
+    4
+  ],
+  "metric": "whiten",
+  "signature_normalize": false,
+  "function_samples": 128,
+  "fit_samples": 300000,
+  "skip_first": false,
+  "skip_head": false,
+  "finetune_epochs": 30,
+  "finetune_lr": 0.0002,
+  "baselines": [
+    "uniform",
+    "lsq",
+    "pq",
+    "prune",
+    "iso"
+  ],
+  "uniform_bits": [
+    8,
+    4,
+    3,
+    2
+  ],
+  "lsq_bits": [
+    4,
+    2
+  ],
+  "prune_sparsity": [
+    0.9,
+    0.95
+  ],
+  "pq_subvectors": [
+    2
+  ],
+  "dense_ckpt": "runs_conv_cifar/cifar100_s42_dense/dense.pt",
+  "require_ckpt": true,
+  "save_dense": true,
+  "stages": [
+    "funccode"
+  ],
+  "smoke": false
+}

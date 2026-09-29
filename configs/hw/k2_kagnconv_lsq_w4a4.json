@@ -1,0 +1,23 @@
+{
+  "model": "kagnconv_lsq_w4a4",
+  "out_dir": "runs_hw",
+  "run_name": null,
+  "seed": 42,
+  "device": "auto",
+  "channels": [
+    16,
+    32
+  ],
+  "ks": 32,
+  "kb": 16,
+  "epochs": null,
+  "dense_epochs": 20,
+  "finetune_epochs": 15,
+  "from_scratch": true,
+  "cluster_from": "k2",
+  "lr": 0.001,
+  "qat_lr": 0.0005,
+  "batch_size": 256,
+  "test_batch_size": 1024,
+  "num_workers": 0
+}

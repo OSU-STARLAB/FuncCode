@@ -1,0 +1,62 @@
+{
+  "design": "gram_funccode_w4a4",
+  "generated": "2026-07-10T01:22:31.812740+00:00",
+  "golden_n": 1000,
+  "stratification": "first 100 test images per class",
+  "sha256": {
+    "params.h": "b2724e749d7343f0690bd46e17a6562f636da856c0a73a0b806a466fd9efe87e",
+    "golden.h": "4d551a5895ae6de45fe2d69f6be024aa1c9156d1a2fece4be6645fe4f880b44d",
+    "golden_inputs.npy": "7eae94f6e79d9c108ab55fa43ed47dad730502d725df1f363ba663de2f496b4b",
+    "golden_outputs.npy": "ff12604f81bb1f3e2b309907abb445c502a9c588641eff6462b36301fee30313",
+    "golden_labels.npy": "ffc59e55de2a3441722663e785cb55c2a9ce1606ce9a9d46d7890dfc2ccef6c2",
+    "golden_indices.npy": "f58b3c93b1c3179f706436d0ef76f0d2fd81ebfe6414998ea1298a309f7a246f"
+  },
+  "l1": {
+    "milestone": "M3",
+    "rung": "L1",
+    "design": "gram_funccode_w4a4",
+    "n_images": 10000,
+    "argmax_agree": 10000,
+    "argmax_mismatch_indices": [],
+    "torch_fake_quant_acc": 96.09,
+    "emulator_acc": 96.09,
+    "passed": true
+  },
+  "l4": {
+    "milestone": "M3",
+    "rung": "L4",
+    "design": "gram_funccode_w4a4",
+    "emulator_acc": 96.09,
+    "dense_fp32_acc": 96.68,
+    "delta_pp": 0.5900000000000034,
+    "passed": false
+  },
+  "family": "gram",
+  "input_step": 0.4199902415275574,
+  "act_steps": [
+    0.4199902415275574,
+    0.26482129096984863
+  ],
+  "pre_ln_frac": 12,
+  "norm_frac": 12,
+  "gamma_frac": 12,
+  "beta_frac": 24,
+  "silu_tab_frac": 10,
+  "logit_shift": 6,
+  "requant": [
+    {
+      "mult_basis": 41845848,
+      "mult_base": 1179159680,
+      "shift": 34,
+      "act_mult": 2027295124,
+      "act_shift": 39
+    },
+    {
+      "mult_basis": 48210864,
+      "mult_base": 1311756416,
+      "shift": 34,
+      "act_mult": 0,
+      "act_shift": 1
+    }
+  ]
+}

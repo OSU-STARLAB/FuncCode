@@ -1,0 +1,46 @@
+{
+  "design": "kagnconv_funccode_w4a4",
+  "generated": "2026-07-10T02:41:40.343813+00:00",
+  "golden_n": 1000,
+  "stratification": "first 100 test images per class",
+  "sha256": {
+    "params.h": "c1a7dba398aea7885e9a361fd5e510269e87894e89af499e9ce38333fe0f0264",
+    "golden.h": "7690fd82b8a9d674bb126c7275e88d665957ff07cb501238a788b7e8b1668eae",
+    "golden_inputs.npy": "520c05e132c031049751e75d5a2cf13af6ac7be6b0a989483a5907dee62bcab3",
+    "golden_outputs.npy": "1ce3f1473a699e755e4e35bd83bdd835adfc5f97c38cc65363f49a492ad30987",
+    "golden_labels.npy": "ffc59e55de2a3441722663e785cb55c2a9ce1606ce9a9d46d7890dfc2ccef6c2",
+    "golden_indices.npy": "f58b3c93b1c3179f706436d0ef76f0d2fd81ebfe6414998ea1298a309f7a246f"
+  },
+  "l1": {
+    "milestone": "M3",
+    "rung": "L1",
+    "design": "kagnconv_funccode_w4a4",
+    "n_images": 10000,
+    "argmax_agree": 10000,
+    "argmax_mismatch_indices": [],
+    "torch_fake_quant_acc": 89.78,
+    "emulator_acc": 89.78,
+    "passed": true
+  },
+  "l4": {
+    "milestone": "M3",
+    "rung": "L4",
+    "design": "kagnconv_funccode_w4a4",
+    "emulator_acc": 89.78,
+    "dense_fp32_acc": 95.43,
+    "delta_pp": 5.650000000000006,
+    "passed": false
+  },
+  "family": "kagnconv",
+  "input_step": 0.37355881929397583,
+  "act_steps": [
+    0.37355881929397583,
+    0.20975647866725922,
+    0.18750464916229248,
+    0.037365686148405075
+  ],
+  "pool": {
+    "mult": 1759392966,
+    "shift": 34
+  }
+}

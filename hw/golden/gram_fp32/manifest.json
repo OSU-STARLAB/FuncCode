@@ -1,0 +1,26 @@
+{
+  "design": "gram_fp32",
+  "generated": "2026-07-10T01:19:57.991441+00:00",
+  "golden_n": 1000,
+  "stratification": "first 100 test images per class",
+  "sha256": {
+    "params.h": "d3325d2150075349fa92d344c3f2aa11ecc9fea473fb850f4f2e1ddb6a96a0a7",
+    "golden.h": "d0b1b9bb9e0c1820a0814f839d7c2413a5d9a7001b3202424568640350d54011",
+    "golden_inputs.npy": "0084caf9efafb0d3aa8502d9eb90d2bbf054935545fc4014a7453bd0821bb777",
+    "golden_outputs.npy": "f362a5afc84602ff3050dcec631c6604e1378d01a3a4ebcf9b49276b58350fbc",
+    "golden_labels.npy": "ffc59e55de2a3441722663e785cb55c2a9ce1606ce9a9d46d7890dfc2ccef6c2",
+    "golden_indices.npy": "f58b3c93b1c3179f706436d0ef76f0d2fd81ebfe6414998ea1298a309f7a246f"
+  },
+  "l1": {
+    "milestone": "M3",
+    "rung": "L1",
+    "design": "d1_fp32",
+    "n_images": 10000,
+    "max_abs_logit_diff": 1.0609626770019531e-05,
+    "argmax_agree": 10000,
+    "numpy_acc": 96.67999999999999,
+    "passed": true
+  },
+  "family": "gram",
+  "logit_tolerance_tb": 0.001
+}

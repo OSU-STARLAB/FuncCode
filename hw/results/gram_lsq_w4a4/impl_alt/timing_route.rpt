@@ -1,0 +1,361 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date              : Thu Jul  9 19:03:28 2026
+| Host              : element running 64-bit major release  (build 9200)
+| Command           : report_timing_summary -file <repo>/hw/results/gram_lsq_w4a4/impl_alt/timing_route.rpt
+| Design            : kan_top
+| Device            : xczu7ev-ffvc1156
+| Speed File        : -2  PRODUCTION 1.25 05-09-2019
+| Temperature Grade : E
+---------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 6 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 46 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      0.398        0.000                      0                54350        0.034        0.000                      0                54350        2.793        0.000                       0                 40118  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock   Waveform(ns)         Period(ns)      Frequency(MHz)
+-----   ------------         ----------      --------------
+ap_clk  {0.000 3.335}        6.670           149.925         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+ap_clk              0.398        0.000                      0                54350        0.034        0.000                      0                54350        2.793        0.000                       0                 40118  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  ap_clk
+  To Clock:  ap_clk
+
+Setup :            0  Failing Endpoints,  Worst Slack        0.398ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.034ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        2.793ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.398ns  (required time - arrival time)
+  Source:                 grp_layer1_fu_96/o7_0_reg_544_reg[0]_rep/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@3.335ns period=6.670ns})
+  Destination:            grp_layer1_fu_96/v_V_U/layer1_v_V_ram_U/ram_reg_0_15_20_20/SP/I
+                            (rising edge-triggered cell RAMS32 clocked by ap_clk  {rise@0.000ns fall@3.335ns period=6.670ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            6.670ns  (ap_clk rise@6.670ns - ap_clk rise@0.000ns)
+  Data Path Delay:        6.170ns  (logic 3.194ns (51.767%)  route 2.976ns (48.233%))
+  Logic Levels:           19  (CARRY8=6 DSP_A_B_DATA=1 DSP_ALU=2 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=2 DSP_PREADD_DATA=1 LUT2=1 LUT4=1 LUT5=1 LUT6=1 MUXF7=1)
+  Clock Path Skew:        0.013ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.043ns = ( 6.713 - 6.670 ) 
+    Source Clock Delay      (SCD):    0.030ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=40388, unset)        0.030     0.030    grp_layer1_fu_96/ap_clk
+    SLICE_X42Y247        FDRE                                         r  grp_layer1_fu_96/o7_0_reg_544_reg[0]_rep/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y247        FDRE (Prop_DFF2_SLICEM_C_Q)
+                                                      0.080     0.110 r  grp_layer1_fu_96/o7_0_reg_544_reg[0]_rep/Q
+                         net (fo=96, routed)          0.528     0.638    grp_layer1_fu_96/o7_0_reg_544_reg[0]_rep_n_1
+    SLICE_X51Y244        LUT6 (Prop_A6LUT_SLICEL_I4_O)
+                                                      0.035     0.673 f  grp_layer1_fu_96/mul_ln68_fu_1312_p2__1_i_64/O
+                         net (fo=1, routed)           0.009     0.682    grp_layer1_fu_96/mux_2_1__1[2]
+    SLICE_X51Y244        MUXF7 (Prop_F7MUX_AB_SLICEL_I1_O)
+                                                      0.064     0.746 f  grp_layer1_fu_96/mul_ln68_fu_1312_p2__1_i_32/O
+                         net (fo=1, routed)           0.201     0.947    grp_layer1_fu_96/mux_3_0__1[2]
+    SLICE_X50Y244        LUT5 (Prop_F6LUT_SLICEM_I4_O)
+                                                      0.123     1.070 f  grp_layer1_fu_96/mul_ln68_fu_1312_p2__1_i_15/O
+                         net (fo=1, routed)           0.734     1.804    grp_layer1_fu_96/mul_ln68_fu_1312_p2__1/A[2]
+    DSP48E2_X0Y96        DSP_A_B_DATA (Prop_DSP_A_B_DATA_DSP48E2_A[2]_A2_DATA[2])
+                                                      0.192     1.996 r  grp_layer1_fu_96/mul_ln68_fu_1312_p2__1/DSP_A_B_DATA_INST/A2_DATA[2]
+                         net (fo=1, routed)           0.000     1.996    grp_layer1_fu_96/mul_ln68_fu_1312_p2__1/DSP_A_B_DATA.A2_DATA<2>
+    DSP48E2_X0Y96        DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_DSP48E2_A2_DATA[2]_A2A1[2])
+                                                      0.076     2.072 r  grp_layer1_fu_96/mul_ln68_fu_1312_p2__1/DSP_PREADD_DATA_INST/A2A1[2]
+                         net (fo=1, routed)           0.000     2.072    grp_layer1_fu_96/mul_ln68_fu_1312_p2__1/DSP_PREADD_DATA.A2A1<2>
+    DSP48E2_X0Y96        DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_DSP48E2_A2A1[2]_U[23])
+                                                      0.505     2.577 f  grp_layer1_fu_96/mul_ln68_fu_1312_p2__1/DSP_MULTIPLIER_INST/U[23]
+                         net (fo=1, routed)           0.000     2.577    grp_layer1_fu_96/mul_ln68_fu_1312_p2__1/DSP_MULTIPLIER.U<23>
+    DSP48E2_X0Y96        DSP_M_DATA (Prop_DSP_M_DATA_DSP48E2_U[23]_U_DATA[23])
+                                                      0.047     2.624 r  grp_layer1_fu_96/mul_ln68_fu_1312_p2__1/DSP_M_DATA_INST/U_DATA[23]
+                         net (fo=1, routed)           0.000     2.624    grp_layer1_fu_96/mul_ln68_fu_1312_p2__1/DSP_M_DATA.U_DATA<23>
+    DSP48E2_X0Y96        DSP_ALU (Prop_DSP_ALU_DSP48E2_U_DATA[23]_ALU_OUT[47])
+                                                      0.585     3.209 f  grp_layer1_fu_96/mul_ln68_fu_1312_p2__1/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, routed)           0.000     3.209    grp_layer1_fu_96/mul_ln68_fu_1312_p2__1/DSP_ALU.ALU_OUT<47>
+    DSP48E2_X0Y96        DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[47]_PCOUT[47])
+                                                      0.122     3.331 r  grp_layer1_fu_96/mul_ln68_fu_1312_p2__1/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, routed)           0.014     3.345    grp_layer1_fu_96/mul_ln68_fu_1312_p2__2/PCIN[47]
+    DSP48E2_X0Y97        DSP_ALU (Prop_DSP_ALU_DSP48E2_PCIN[47]_ALU_OUT[2])
+                                                      0.546     3.891 f  grp_layer1_fu_96/mul_ln68_fu_1312_p2__2/DSP_ALU_INST/ALU_OUT[2]
+                         net (fo=1, routed)           0.000     3.891    grp_layer1_fu_96/mul_ln68_fu_1312_p2__2/DSP_ALU.ALU_OUT<2>
+    DSP48E2_X0Y97        DSP_OUTPUT (Prop_DSP_OUTPUT_DSP48E2_ALU_OUT[2]_P[2])
+                                                      0.109     4.000 r  grp_layer1_fu_96/mul_ln68_fu_1312_p2__2/DSP_OUTPUT_INST/P[2]
+                         net (fo=2, routed)           0.677     4.677    grp_layer1_fu_96/mul_ln68_fu_1312_p2__2_n_104
+    SLICE_X27Y243        LUT2 (Prop_D6LUT_SLICEL_I0_O)
+                                                      0.050     4.727 r  grp_layer1_fu_96/ram_reg_0_15_0_0_i_97/O
+                         net (fo=1, routed)           0.009     4.736    grp_layer1_fu_96/ram_reg_0_15_0_0_i_97_n_1
+    SLICE_X27Y243        CARRY8 (Prop_CARRY8_SLICEL_S[3]_CO[7])
+                                                      0.154     4.890 r  grp_layer1_fu_96/ram_reg_0_15_0_0_i_68/CO[7]
+                         net (fo=1, routed)           0.026     4.916    grp_layer1_fu_96/ram_reg_0_15_0_0_i_68_n_1
+    SLICE_X27Y244        CARRY8 (Prop_CARRY8_SLICEL_CI_CO[7])
+                                                      0.015     4.931 r  grp_layer1_fu_96/ram_reg_0_15_0_0_i_33__0/CO[7]
+                         net (fo=1, routed)           0.026     4.957    grp_layer1_fu_96/ram_reg_0_15_0_0_i_33__0_n_1
+    SLICE_X27Y245        CARRY8 (Prop_CARRY8_SLICEL_CI_O[5])
+                                                      0.116     5.073 r  grp_layer1_fu_96/ram_reg_0_15_0_0_i_13__0/O[5]
+                         net (fo=3, routed)           0.235     5.308    grp_layer1_fu_96/v_V_U/layer1_v_V_ram_U/mul_ln68_fu_1312_p2__3[21]
+    SLICE_X25Y247        LUT4 (Prop_F6LUT_SLICEM_I2_O)
+                                                      0.098     5.406 r  grp_layer1_fu_96/v_V_U/layer1_v_V_ram_U/ram_reg_0_15_0_0_i_17__0/O
+                         net (fo=1, routed)           0.022     5.428    grp_layer1_fu_96/v_V_U/layer1_v_V_ram_U/ram_reg_0_15_0_0_i_17__0_n_1
+    SLICE_X25Y247        CARRY8 (Prop_CARRY8_SLICEM_S[5]_CO[7])
+                                                      0.159     5.587 r  grp_layer1_fu_96/v_V_U/layer1_v_V_ram_U/ram_reg_0_15_0_0_i_1__1/CO[7]
+                         net (fo=1, routed)           0.026     5.613    grp_layer1_fu_96/v_V_U/layer1_v_V_ram_U/ram_reg_0_15_0_0_i_1__1_n_1
+    SLICE_X25Y248        CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.015     5.628 r  grp_layer1_fu_96/v_V_U/layer1_v_V_ram_U/ram_reg_0_15_6_6_i_1__0/CO[7]
+                         net (fo=1, routed)           0.026     5.654    grp_layer1_fu_96/v_V_U/layer1_v_V_ram_U/ram_reg_0_15_6_6_i_1__0_n_1
+    SLICE_X25Y249        CARRY8 (Prop_CARRY8_SLICEM_CI_O[6])
+                                                      0.103     5.757 r  grp_layer1_fu_96/v_V_U/layer1_v_V_ram_U/ram_reg_0_15_14_14_i_1__0/O[6]
+                         net (fo=1, routed)           0.443     6.200    grp_layer1_fu_96/v_V_U/layer1_v_V_ram_U/ram_reg_0_15_20_20/D
+    SLICE_X35Y248        RAMS32                                       r  grp_layer1_fu_96/v_V_U/layer1_v_V_ram_U/ram_reg_0_15_20_20/SP/I
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     6.670     6.670 r  
+                                                      0.000     6.670 r  ap_clk (IN)
+                         net (fo=40388, unset)        0.043     6.713    grp_layer1_fu_96/v_V_U/layer1_v_V_ram_U/ram_reg_0_15_20_20/WCLK
+    SLICE_X35Y248        RAMS32                                       r  grp_layer1_fu_96/v_V_U/layer1_v_V_ram_U/ram_reg_0_15_20_20/SP/CLK
+                         clock pessimism              0.000     6.713    
+                         clock uncertainty           -0.035     6.678    
+    SLICE_X35Y248        RAMS32 (Setup_B6LUT_SLICEM_CLK_I)
+                                                     -0.080     6.598    grp_layer1_fu_96/v_V_U/layer1_v_V_ram_U/ram_reg_0_15_20_20/SP
+  -------------------------------------------------------------------
+                         required time                          6.598    
+                         arrival time                          -6.200    
+  -------------------------------------------------------------------
+                         slack                                  0.398    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.034ns  (arrival time - required time)
+  Source:                 grp_layer1_fu_96/grp_int_layernorm_10_s_fu_566/kan_top_sdiv_64nseOg_U42/kan_top_sdiv_64nseOg_div_U/kan_top_sdiv_64nseOg_div_u_0/loop[16].divisor_tmp_reg[17][42]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@3.335ns period=6.670ns})
+  Destination:            grp_layer1_fu_96/grp_int_layernorm_10_s_fu_566/kan_top_sdiv_64nseOg_U42/kan_top_sdiv_64nseOg_div_U/kan_top_sdiv_64nseOg_div_u_0/loop[17].divisor_tmp_reg[18][42]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@3.335ns period=6.670ns})
+  Path Group:             ap_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (ap_clk rise@0.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        0.085ns  (logic 0.039ns (45.882%)  route 0.046ns (54.118%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.005ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.018ns
+    Source Clock Delay      (SCD):    0.013ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=40388, unset)        0.013     0.013    grp_layer1_fu_96/grp_int_layernorm_10_s_fu_566/kan_top_sdiv_64nseOg_U42/kan_top_sdiv_64nseOg_div_U/kan_top_sdiv_64nseOg_div_u_0/ap_clk
+    SLICE_X36Y300        FDRE                                         r  grp_layer1_fu_96/grp_int_layernorm_10_s_fu_566/kan_top_sdiv_64nseOg_U42/kan_top_sdiv_64nseOg_div_U/kan_top_sdiv_64nseOg_div_u_0/loop[16].divisor_tmp_reg[17][42]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X36Y300        FDRE (Prop_EFF_SLICEL_C_Q)
+                                                      0.039     0.052 r  grp_layer1_fu_96/grp_int_layernorm_10_s_fu_566/kan_top_sdiv_64nseOg_U42/kan_top_sdiv_64nseOg_div_U/kan_top_sdiv_64nseOg_div_u_0/loop[16].divisor_tmp_reg[17][42]/Q
+                         net (fo=2, routed)           0.046     0.098    grp_layer1_fu_96/grp_int_layernorm_10_s_fu_566/kan_top_sdiv_64nseOg_U42/kan_top_sdiv_64nseOg_div_U/kan_top_sdiv_64nseOg_div_u_0/loop[16].divisor_tmp_reg[17]_230[42]
+    SLICE_X36Y301        FDRE                                         r  grp_layer1_fu_96/grp_int_layernorm_10_s_fu_566/kan_top_sdiv_64nseOg_U42/kan_top_sdiv_64nseOg_div_U/kan_top_sdiv_64nseOg_div_u_0/loop[17].divisor_tmp_reg[18][42]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=40388, unset)        0.018     0.018    grp_layer1_fu_96/grp_int_layernorm_10_s_fu_566/kan_top_sdiv_64nseOg_U42/kan_top_sdiv_64nseOg_div_U/kan_top_sdiv_64nseOg_div_u_0/ap_clk
+    SLICE_X36Y301        FDRE                                         r  grp_layer1_fu_96/grp_int_layernorm_10_s_fu_566/kan_top_sdiv_64nseOg_U42/kan_top_sdiv_64nseOg_div_U/kan_top_sdiv_64nseOg_div_u_0/loop[17].divisor_tmp_reg[18][42]/C
+                         clock pessimism              0.000     0.018    
+    SLICE_X36Y301        FDRE (Hold_CFF_SLICEL_C_D)
+                                                      0.046     0.064    grp_layer1_fu_96/grp_int_layernorm_10_s_fu_566/kan_top_sdiv_64nseOg_U42/kan_top_sdiv_64nseOg_div_U/kan_top_sdiv_64nseOg_div_u_0/loop[17].divisor_tmp_reg[18][42]
+  -------------------------------------------------------------------
+                         required time                         -0.064    
+                         arrival time                           0.098    
+  -------------------------------------------------------------------
+                         slack                                  0.034    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         ap_clk
+Waveform(ns):       { 0.000 3.335 }
+Period(ns):         6.670
+Sources:            { ap_clk }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
+Min Period        n/a     RAMB18E2/CLKARDCLK  n/a            1.569         6.670       5.101      RAMB18_X3Y56  grp_layer0_fu_68/v_V_U/layer0_v_V_ram_U/ram_reg/CLKARDCLK
+Low Pulse Width   Slow    RAMB36E2/CLKARDCLK  n/a            0.542         3.335       2.793      RAMB36_X2Y17  grp_layer0_fu_68/q0_reg_0_10/CLKARDCLK
+High Pulse Width  Slow    RAMB36E2/CLKARDCLK  n/a            0.542         3.335       2.793      RAMB36_X2Y17  grp_layer0_fu_68/q0_reg_0_10/CLKARDCLK
+
+
+

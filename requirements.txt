@@ -1,0 +1,12 @@
+torch
+torchvision
+numpy
+pandas
+scikit-learn
+tqdm
+# Optional: only needed for tools/safetensors_to_torch.py
+safetensors
+# Optional: auto-fetch paths for UCI datasets in funcodekan.data.registry
+# ucimlrepo
+# requests
+# openpyxl

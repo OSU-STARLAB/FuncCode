@@ -1,0 +1,84 @@
+{
+  "tier": "tier1",
+  "seeds": [
+    123,
+    2026
+  ],
+  "datasets": [
+    "cifar10_8l"
+  ],
+  "jobs": [
+    {
+      "name": "dense_cifar10_8l_s123",
+      "priority": 0,
+      "est_minutes": 115,
+      "cmd": [
+        "python",
+        "-m",
+        "funcodekan.experiments.conv_cifar",
+        "--dataset",
+        "cifar10",
+        "--preset",
+        "kagn_simple_cifar10_8_layer_v2",
+        "--seed",
+        "123",
+        "--data-root",
+        "./data",
+        "--out-dir",
+        "runs_conv_cifar",
+        "--run-name",
+        "cifar10_8l_s123_dense",
+        "--batch-size",
+        "128",
+        "--lr",
+        "0.001",
+        "--epochs",
+        "200",
+        "--mixup",
+        "0.0",
+        "--finetune-epochs",
+        "30",
+        "--num-workers",
+        "3",
+        "--stages",
+        "dense"
+      ]
+    },
+    {
+      "name": "dense_cifar10_8l_s2026",
+      "priority": 0,
+      "est_minutes": 115,
+      "cmd": [
+        "python",
+        "-m",
+        "funcodekan.experiments.conv_cifar",
+        "--dataset",
+        "cifar10",
+        "--preset",
+        "kagn_simple_cifar10_8_layer_v2",
+        "--seed",
+        "2026",
+        "--data-root",
+        "./data",
+        "--out-dir",
+        "runs_conv_cifar",
+        "--run-name",
+        "cifar10_8l_s2026_dense",
+        "--batch-size",
+        "128",
+        "--lr",
+        "0.001",
+        "--epochs",
+        "200",
+        "--mixup",
+        "0.0",
+        "--finetune-epochs",
+        "30",
+        "--num-workers",
+        "3",
+        "--stages",
+        "dense"
+      ]
+    }
+  ]
+}

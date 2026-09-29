@@ -1,0 +1,62 @@
+{
+  "design": "gram_lsq_w4a4",
+  "generated": "2026-07-10T01:22:17.297548+00:00",
+  "golden_n": 1000,
+  "stratification": "first 100 test images per class",
+  "sha256": {
+    "params.h": "dac2c1ca7ffe4ec82e857fa820e90d09198095da059fc303e8e91ba0d965019c",
+    "golden.h": "97d9c8fefff7d625d6f22174ec12b0f1b477834c5bdc4c3d576f3136cc8b3481",
+    "golden_inputs.npy": "7eae94f6e79d9c108ab55fa43ed47dad730502d725df1f363ba663de2f496b4b",
+    "golden_outputs.npy": "86f495b2bc93081e9d106a14b5dfb380e3cdc29129a3ad766c7400147f8a82d8",
+    "golden_labels.npy": "ffc59e55de2a3441722663e785cb55c2a9ce1606ce9a9d46d7890dfc2ccef6c2",
+    "golden_indices.npy": "f58b3c93b1c3179f706436d0ef76f0d2fd81ebfe6414998ea1298a309f7a246f"
+  },
+  "l1": {
+    "milestone": "M3",
+    "rung": "L1",
+    "design": "gram_lsq_w4a4",
+    "n_images": 10000,
+    "argmax_agree": 10000,
+    "argmax_mismatch_indices": [],
+    "torch_fake_quant_acc": 97.23,
+    "emulator_acc": 97.23,
+    "passed": true
+  },
+  "l4": {
+    "milestone": "M3",
+    "rung": "L4",
+    "design": "gram_lsq_w4a4",
+    "emulator_acc": 97.23,
+    "dense_fp32_acc": 96.68,
+    "delta_pp": -0.5499999999999972,
+    "passed": true
+  },
+  "family": "gram",
+  "input_step": 0.4196538031101227,
+  "act_steps": [
+    0.4196538031101227,
+    0.21920806169509888
+  ],
+  "pre_ln_frac": 12,
+  "norm_frac": 12,
+  "gamma_frac": 12,
+  "beta_frac": 24,
+  "silu_tab_frac": 10,
+  "logit_shift": 6,
+  "requant": [
+    {
+      "mult_basis": 96805728,
+      "mult_base": 1291635328,
+      "shift": 34,
+      "act_mult": 1224569270,
+      "act_shift": 38
+    },
+    {
+      "mult_basis": 106291264,
+      "mult_base": 1326755072,
+      "shift": 34,
+      "act_mult": 0,
+      "act_shift": 1
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../../tb/tb_main.cpp in debug mode
+   Compiling ../../../../../hls/funccode_w4a4/top.cpp in debug mode
+   Generating csim.exe
+TB_RESULT n=1000 vectors_with_logit_mismatch=0 argmax_agree=1000 accuracy_pct=95.00
+TB_PASS
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

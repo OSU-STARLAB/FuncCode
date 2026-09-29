@@ -1,0 +1,68 @@
+{
+  "design": "d2",
+  "generated": "2026-07-04T01:01:53.387733+00:00",
+  "golden_n": 1000,
+  "stratification": "first 100 test images per class",
+  "sha256": {
+    "params.h": "66e04e3cf786b7d49a39e11a393d35f115ac0696d03ac5a625182356f4c213b9",
+    "golden.h": "760078e87efc94b4222487950a62250e98768b5728c03a0bb4afd330a7b42d9d",
+    "golden_inputs.npy": "43fcf699f169f82cdb5410be11e3c4ec61cc258a2ab231ca9ac56956bf71b65f",
+    "golden_outputs.npy": "6660b87e194df1a8659a1874fca7292c791b4e70268fe3bbb50d78a0fa05936d",
+    "golden_labels.npy": "ffc59e55de2a3441722663e785cb55c2a9ce1606ce9a9d46d7890dfc2ccef6c2",
+    "golden_indices.npy": "f58b3c93b1c3179f706436d0ef76f0d2fd81ebfe6414998ea1298a309f7a246f"
+  },
+  "l1": {
+    "milestone": "M3",
+    "rung": "L1",
+    "design": "d2",
+    "n_images": 10000,
+    "argmax_agree": 10000,
+    "argmax_mismatch_indices": [],
+    "torch_fake_quant_acc": 96.22,
+    "emulator_acc": 96.22,
+    "passed": true
+  },
+  "l4": {
+    "milestone": "M3",
+    "rung": "L4",
+    "design": "d2",
+    "emulator_acc": 96.22,
+    "dense_fp32_acc": 96.28,
+    "delta_pp": 0.060000000000002274,
+    "passed": true
+  },
+  "input_step": 0.401250422000885,
+  "act_steps": [
+    0.401250422000885,
+    3.0573270320892334
+  ],
+  "basis_frac_bits": 14,
+  "silu_frac_bits": 10,
+  "logit_frac_bits": 16,
+  "int4_range": [
+    -8,
+    7
+  ],
+  "requant": [
+    {
+      "mult_spline": 97202377,
+      "mult_base": 1414287977,
+      "shift": 47
+    },
+    {
+      "mult_spline": 105193832,
+      "mult_base": 1723435008,
+      "shift": 29
+    }
+  ],
+  "weight_steps": {
+    "layer0": {
+      "spline_step": 0.034596242010593414,
+      "base_step": 0.03146081045269966
+    },
+    "layer1": {
+      "spline_step": 0.048984695225954056,
+      "base_step": 0.050158560276031494
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "run_name": "gram_hw_source",
+  "out_dir": "runs_hw",
+  "seed": 42,
+  "device": "auto",
+  "variants": [
+    "gram"
+  ],
+  "methods": [
+    "branch"
+  ],
+  "clusters_list": [
+    32
+  ],
+  "bits_list": [
+    8,
+    6,
+    4,
+    3,
+    2
+  ],
+  "width": 64,
+  "grid_size": 5,
+  "spline_order": 3,
+  "num_grids": 8,
+  "degree": 3,
+  "activation": "silu",
+  "epochs": 10,
+  "finetune_epochs": 20,
+  "lr": 0.001,
+  "finetune_lr": 0.0005,
+  "function_samples": 128,
+  "batch_size": 1024,
+  "test_batch_size": 2048,
+  "num_workers": 0
+}

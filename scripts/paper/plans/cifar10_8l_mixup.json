@@ -1,0 +1,47 @@
+{
+  "tier": "tier1",
+  "seeds": [
+    42
+  ],
+  "datasets": [
+    "cifar10_8l_mixup"
+  ],
+  "jobs": [
+    {
+      "name": "dense_cifar10_8l_mixup_s42",
+      "priority": 0,
+      "est_minutes": 115,
+      "cmd": [
+        "python",
+        "-m",
+        "funcodekan.experiments.conv_cifar",
+        "--dataset",
+        "cifar10",
+        "--preset",
+        "kagn_simple_cifar10_8_layer_v2",
+        "--seed",
+        "42",
+        "--data-root",
+        "./data",
+        "--out-dir",
+        "runs_conv_cifar",
+        "--run-name",
+        "cifar10_8l_mixup_s42_dense",
+        "--batch-size",
+        "128",
+        "--lr",
+        "0.001",
+        "--epochs",
+        "200",
+        "--mixup",
+        "0.2",
+        "--finetune-epochs",
+        "30",
+        "--num-workers",
+        "3",
+        "--stages",
+        "dense"
+      ]
+    }
+  ]
+}
